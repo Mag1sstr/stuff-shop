@@ -1,0 +1,20 @@
+.row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #191919;
+  padding: 24px;
+  border-radius: 6px;
+}
+.text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-weight: 500;
+  color: #576067;
+  span {
+    color: #6c3eb8;
+  }
+}

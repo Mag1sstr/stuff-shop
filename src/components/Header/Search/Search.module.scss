@@ -1,0 +1,19 @@
+.search {
+  width: 283px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #191919;
+  min-height: 27px;
+  border-radius: 6px;
+}
+.input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 12px;
+  font-family: inherit;
+}

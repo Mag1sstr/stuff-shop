@@ -1,0 +1,15 @@
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #b8b8b8;
+  font-size: 12px;
+}
+.avatar {
+  width: 36px;
+  height: 36px;
+  background-color: #191919;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}

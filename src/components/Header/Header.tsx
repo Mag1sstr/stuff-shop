@@ -4,8 +4,6 @@ import { ROUTES } from "../../utils/routes";
 import Logo from "../Logo/Logo";
 import User from "./User/User";
 import Search from "./Search/Search";
-import like from "../../images/header/like.svg";
-import cart from "../../images/header/cart.svg";
 
 function Header() {
   return (

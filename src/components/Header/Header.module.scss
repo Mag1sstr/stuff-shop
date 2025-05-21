@@ -3,6 +3,7 @@
   align-items: center;
   gap: 227px;
   padding: 20px;
+  justify-content: flex-start;
 }
 .info {
   width: 100%;
@@ -47,4 +48,9 @@
   right: -6px;
   bottom: 0;
   font-weight: 600;
+}
+@media (max-width: 850px) {
+  .row {
+    gap: 40px;
+  }
 }

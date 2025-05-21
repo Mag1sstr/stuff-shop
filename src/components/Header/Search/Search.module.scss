@@ -1,5 +1,5 @@
 .search {
-  width: 283px;
+  width: 303px;
   padding: 0 10px;
   display: flex;
   align-items: center;
@@ -16,4 +16,9 @@
   color: #fff;
   font-size: 12px;
   font-family: inherit;
+}
+@media (max-width: 750px) {
+  .search {
+    width: 180px;
+  }
 }

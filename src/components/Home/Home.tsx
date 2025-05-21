@@ -1,8 +1,10 @@
+import Banner from "../Banner/Banner";
+
 function Home() {
   return (
-    <section>
-      <h1>Home</h1>
-    </section>
+    <>
+      <Banner />
+    </>
   );
 }
 

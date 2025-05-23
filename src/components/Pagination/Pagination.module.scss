@@ -1,0 +1,27 @@
+.row {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  margin-top: 32px;
+}
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #212123;
+  color: #576067;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    filter: brightness(90%);
+  }
+}
+.active {
+  background-color: #6c3eb8;
+  color: #fff;
+}

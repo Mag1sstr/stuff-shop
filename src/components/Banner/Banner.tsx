@@ -1,5 +1,6 @@
 import styles from "./Banner.module.scss";
 import bannerImg from "../../images/banner.png";
+import Button from "../Button/Button";
 
 function Banner() {
   return (
@@ -10,7 +11,8 @@ function Banner() {
         <h1 className={styles.title}>
           LENNON r2d2 <br /> with NVIDIA 5090 TI
         </h1>
-        <button className={styles.btn}>Shop Now</button>
+
+        <Button title="Shop Now" />
       </div>
       <img className={styles.img} src={bannerImg} alt="banner" />
     </section>

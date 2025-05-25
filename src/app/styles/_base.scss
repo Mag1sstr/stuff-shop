@@ -22,9 +22,18 @@ a {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+
+  row-gap: 20px;
   column-gap: 20px;
   margin-bottom: 20px;
 }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 @media (max-width: 850px) {
   .menu {
     height: 300px;

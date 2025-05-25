@@ -5,17 +5,20 @@ import { ROUTES } from "../../../utils/routes";
 
 function Card({ title, category, price, images, id }: IProducts) {
   return (
-    <div className={styles.card}>
-      <img className={styles.img} src={images[0]} alt="" />
-      <Link to={ROUTES.PRODUCTS + `/${id}`}>
+    <Link to={ROUTES.PRODUCTS + `/${id}`}>
+      <div className={styles.card}>
+        <div>
+          <img className={styles.img} src={images[0]} alt="" />
+          <div className={styles.wrapper}>
+            <h3 className={styles.title}>{title}</h3>
+            <p className={styles.category}>{category.name}</p>
+          </div>
+        </div>
         <div className={styles.wrapper}>
-          <h3 className={styles.title}>{title}</h3>
-          <p className={styles.category}>{category.name}</p>
-
           <p className={styles.price}>{price}$</p>
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   );
 }
 

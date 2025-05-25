@@ -4,8 +4,16 @@ import { ROUTES } from "../../utils/routes";
 import Logo from "../Logo/Logo";
 import User from "./User/User";
 import Search from "./Search/Search";
+import { useState } from "react";
+import { useGetProductsQuery } from "../../api/api";
 
 function Header() {
+  const [searchValue, setSearchValue] = useState("");
+
+  const { data: products } = useGetProductsQuery({
+    title: searchValue.trim(),
+  });
+
   return (
     <header className={styles.header}>
       <div className="container">
@@ -13,7 +21,11 @@ function Header() {
           <Logo />
           <div className={styles.info}>
             <User />
-            <Search />
+            <Search
+              setSearchValue={setSearchValue}
+              searchValue={searchValue}
+              data={products!}
+            />
             <ul className={styles.links}>
               <li className={styles.link}>
                 <Link to={ROUTES.FAVORITES}>

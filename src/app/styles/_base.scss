@@ -6,6 +6,10 @@ body {
   font-family: "Montserrat";
   background-color: #212123;
   color: #fff;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 .container {
   max-width: 1304px;

@@ -6,9 +6,11 @@ import User from "./User/User";
 import Search from "./Search/Search";
 import { useState } from "react";
 import { useGetProductsQuery } from "../../api/api";
+import AuthModal from "../AuthModal/AuthModal";
 
 function Header() {
   const [searchValue, setSearchValue] = useState("");
+  const [openModal, setOpenModal] = useState(false);
 
   const { data: products } = useGetProductsQuery({
     title: searchValue.trim(),
@@ -16,11 +18,12 @@ function Header() {
 
   return (
     <header className={styles.header}>
+      <AuthModal open={openModal} setOpen={setOpenModal} />
       <div className="container">
         <div className={styles.row}>
           <Logo />
           <div className={styles.info}>
-            <User />
+            <User onClick={() => setOpenModal(true)} />
             <Search
               setSearchValue={setSearchValue}
               searchValue={searchValue}

@@ -1,26 +1,50 @@
 .card {
   width: 230px;
-  height: 220px;
+  height: 280px;
   border-radius: 8px;
   overflow: hidden;
   background-color: #212123;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: 0.2s;
+  &:hover {
+    filter: brightness(90%);
+    .img {
+      transform: scale(1.05);
+    }
+  }
+}
+.img__wrapper {
+  width: 100%;
+  overflow: hidden;
+  height: 170px;
+  margin-bottom: 12px;
 }
 .img {
   width: 100%;
-  height: 110px;
+  height: 100%;
   object-fit: cover;
-  margin-bottom: 12px;
+  transition: 0.2s;
 }
 .wrapper {
   padding: 0 12px;
 }
 .title {
+  height: 35px;
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 5px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
 }
 .category {
   font-size: 12px;

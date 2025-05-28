@@ -20,7 +20,16 @@ export const shopApi = createApi({
         params,
       }),
     }),
+    getSingleProduct: builder.query<IProducts, string>({
+      query: (id) => ({
+        url: `/products/${id}`,
+      }),
+    }),
   }),
 });
 
-export const { useGetCategoriesQuery, useGetProductsQuery } = shopApi;
+export const {
+  useGetCategoriesQuery,
+  useGetProductsQuery,
+  useGetSingleProductQuery,
+} = shopApi;

@@ -7,6 +7,7 @@ import Search from "./Search/Search";
 import { useState } from "react";
 import { useGetProductsQuery } from "../../api/api";
 import AuthModal from "../AuthModal/AuthModal";
+import { useAppSelector } from "../../store/store";
 
 function Header() {
   const [searchValue, setSearchValue] = useState("");
@@ -15,6 +16,8 @@ function Header() {
   const { data: products } = useGetProductsQuery({
     title: searchValue.trim(),
   });
+
+  const { cart } = useAppSelector((state) => state.cart);
 
   return (
     <header className={styles.header}>
@@ -65,7 +68,7 @@ function Header() {
                       fill="#B8B8B8"
                     />
                   </svg>
-                  <div className={styles.count}>0</div>
+                  <div className={styles.count}>{cart.length}</div>
                 </Link>
               </li>
             </ul>

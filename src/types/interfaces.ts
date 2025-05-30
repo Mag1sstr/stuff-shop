@@ -24,3 +24,7 @@ export interface IProductsParams {
   price_max?: string;
   categoryId?: string;
 }
+
+export interface ICart extends IProducts {
+  count: number;
+}

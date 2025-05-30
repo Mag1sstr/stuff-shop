@@ -3,6 +3,8 @@ import type { IProducts } from "../../../types/interfaces";
 import styles from "./SingleProductBanner.module.scss";
 import Button from "../../../components/Button/Button";
 import Spinner from "../../../components/Spinner/Spinner";
+import { useAppDispatch } from "../../../store/store";
+import { addCartItem } from "../../../store/slices/cartSlice";
 
 interface IProps extends IProducts {
   isLoading: boolean;
@@ -15,8 +17,16 @@ function SingleProductBanner({
   price,
   category,
   isLoading,
+  id,
 }: IProps) {
   const [currentImage, setCurrentImage] = useState(0);
+  const dispatch = useAppDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(
+      addCartItem({ title, images, description, category, id, count: 1 })
+    );
+  };
   return (
     <div className={styles.banner}>
       {isLoading ? (
@@ -44,7 +54,7 @@ function SingleProductBanner({
             </p>
             <p className={styles.description}>{description}</p>
             <div className={styles.buttons}>
-              <Button title="Add to cart" />
+              <Button onClick={handleAddToCart} title="Add to cart" />
             </div>
           </div>
         </div>

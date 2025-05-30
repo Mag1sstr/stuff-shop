@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 import { shopApi } from "../api/api";
+import cartSlice from "./slices/cartSlice";
 
 export const store = configureStore({
   reducer: {
+    cart: cartSlice,
     [shopApi.reducerPath]: shopApi.reducer,
   },
   middleware(getDefaultMiddleware) {

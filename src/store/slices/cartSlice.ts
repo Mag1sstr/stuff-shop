@@ -22,11 +22,32 @@ export const cartSlice = createSlice({
       state.cart.push(action.payload);
     },
     deleteCartItem(state, action) {
-      state.cart = state.cart.filter((el) => el.id !== action.payload.id);
+      state.cart = state.cart.filter((el) => el.id !== action.payload);
+    },
+    increaseCartItem(state, action) {
+      state.cart = state.cart.map((el) => {
+        if (el.id === action.payload) {
+          return { ...el, count: el.count + 1 };
+        }
+        return el;
+      });
+    },
+    decreaseCartItem(state, action) {
+      state.cart = state.cart.map((el) => {
+        if (el.id === action.payload && el.count > 1) {
+          return { ...el, count: el.count - 1 };
+        }
+        return el;
+      });
     },
   },
 });
 
-export const { addCartItem, deleteCartItem } = cartSlice.actions;
+export const {
+  addCartItem,
+  deleteCartItem,
+  increaseCartItem,
+  decreaseCartItem,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;

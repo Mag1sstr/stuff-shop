@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+.Toastify__progress-bar {
+  background: #8b57c6;
+  &--bg {
+    background: #8b57c6;
+  }
+}
+.Toastify__toast {
+  width: 280px;
+  background: #191919;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,6 +23,13 @@ body {
     display: none;
   }
 }
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .container {
   max-width: 1304px;
   margin: 0 auto;

@@ -53,4 +53,4 @@ export default tseslint.config({
 });
 ```
 
-<!-- Использовано: TS, Redux Toolkit, Scss  -->
+<!-- Использовано: TS, Redux Toolkit, Scss, rtk query  -->

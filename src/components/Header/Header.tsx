@@ -8,20 +8,37 @@ import { useState } from "react";
 import { useGetProductsQuery } from "../../api/api";
 import AuthModal from "../AuthModal/AuthModal";
 import { useAppSelector } from "../../store/store";
+import { Bounce, ToastContainer } from "react-toastify";
+import { useDebouce } from "../../utils/useDebounce";
 
 function Header() {
   const [searchValue, setSearchValue] = useState("");
   const [openModal, setOpenModal] = useState(false);
 
   const { data: products } = useGetProductsQuery({
-    title: searchValue.trim(),
+    title: useDebouce(searchValue.trim()),
   });
 
   const { cart } = useAppSelector((state) => state.cart);
 
   return (
     <header className={styles.header}>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+        theme="dark"
+        transition={Bounce}
+      />
+
       <AuthModal open={openModal} setOpen={setOpenModal} />
+
       <div className="container">
         <div className={styles.row}>
           <Logo />
@@ -68,7 +85,9 @@ function Header() {
                       fill="#B8B8B8"
                     />
                   </svg>
-                  <div className={styles.count}>{cart.length}</div>
+                  {!!cart.length && (
+                    <div className={styles.count}>{cart.length}</div>
+                  )}
                 </Link>
               </li>
             </ul>

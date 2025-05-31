@@ -4,11 +4,13 @@ import Header from "../components/Header/Header";
 
 function App() {
   return (
-    <>
-      <Header />
-      <AppRouter />
+    <div className="app">
+      <div>
+        <Header />
+        <AppRouter />
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

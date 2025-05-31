@@ -5,6 +5,7 @@ import Button from "../../../components/Button/Button";
 import Spinner from "../../../components/Spinner/Spinner";
 import { useAppDispatch } from "../../../store/store";
 import { addCartItem } from "../../../store/slices/cartSlice";
+import { toast } from "react-toastify";
 
 interface IProps extends IProducts {
   isLoading: boolean;
@@ -24,8 +25,10 @@ function SingleProductBanner({
 
   const handleAddToCart = () => {
     dispatch(
-      addCartItem({ title, images, description, category, id, count: 1 })
+      addCartItem({ title, images, description, category, price, id, count: 1 })
     );
+
+    toast.success("Added to cart!");
   };
   return (
     <div className={styles.banner}>
@@ -38,6 +41,7 @@ function SingleProductBanner({
             <div className={styles.col}>
               {images.map((img, index) => (
                 <img
+                  key={img}
                   onClick={() => setCurrentImage(index)}
                   className={styles.item}
                   src={img}
@@ -54,7 +58,7 @@ function SingleProductBanner({
             </p>
             <p className={styles.description}>{description}</p>
             <div className={styles.buttons}>
-              <Button onClick={handleAddToCart} title="Add to cart" />
+              <Button onClick={handleAddToCart}>Add to cart</Button>
             </div>
           </div>
         </div>

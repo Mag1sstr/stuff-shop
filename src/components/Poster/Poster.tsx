@@ -10,7 +10,7 @@ function Poster() {
               NEW YEAR <br /> <span>SALE</span>
             </h2>
             <div className={styles.btn}>
-              <Button title="See more" />
+              <Button>See more</Button>
             </div>
           </div>
           <div className={styles.right}>

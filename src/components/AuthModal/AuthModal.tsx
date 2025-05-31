@@ -43,7 +43,9 @@ function AuthModal({ open, setOpen }: IProps) {
           <input className={styles.input} type="text" placeholder="E-mail" />
           <input className={styles.input} type="text" placeholder="Password" />
         </div>
-        <Button fontWeight={500} width="100%" title="Create an account" />
+        <Button fontWeight={500} width="100%">
+          Create an account
+        </Button>
       </div>
     </div>
   );

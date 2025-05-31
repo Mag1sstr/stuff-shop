@@ -47,7 +47,7 @@ function Products({ title = "Products" }: IProps) {
           </div>
           {!more && (
             <div className={styles.btn}>
-              <Button onClick={() => setMore(true)} title="See more" />
+              <Button onClick={() => setMore(true)}>See more</Button>
             </div>
           )}
           {more && (

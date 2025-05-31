@@ -12,7 +12,7 @@ function Banner() {
           LENNON r2d2 <br /> with NVIDIA 5090 TI
         </h1>
 
-        <Button title="Shop Now" />
+        <Button>Shop Now</Button>
       </div>
       <img className={styles.img} src={bannerImg} alt="banner" />
     </section>

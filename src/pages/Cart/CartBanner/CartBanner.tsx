@@ -37,7 +37,9 @@ function CartBanner() {
                 <div className={styles.info}>
                   <img src={images[0]} alt="" />
                   <div>
-                    <p className={styles.title}>{title}</p>
+                    <p className={styles.title} title={title}>
+                      {title}
+                    </p>
                     <p className={styles.category}>{category.name}</p>
                   </div>
                 </div>

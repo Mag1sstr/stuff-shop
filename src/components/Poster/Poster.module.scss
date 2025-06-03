@@ -16,9 +16,11 @@
     content: "";
     width: 204px;
     height: 170px;
+
     position: absolute;
     bottom: 74px;
     left: -25px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-image: url("../../images/poster/01.png");
   }
@@ -30,6 +32,7 @@
     bottom: -23px;
     right: -20px;
     z-index: 100;
+    background-size: cover;
     background-repeat: no-repeat;
     background-image: url("../../images/poster/02.png");
   }
@@ -93,6 +96,27 @@
     &::before {
       background-size: cover;
       background-position: center;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 40px;
+    span {
+      font-size: 100px;
+    }
+  }
+  .left {
+    &::before {
+      width: 130px;
+      height: 70px;
+      background-size: cover;
+    }
+    &::after {
+      width: 130px;
+      height: 100px;
+      background-size: cover;
     }
   }
 }

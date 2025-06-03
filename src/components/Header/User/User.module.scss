@@ -13,3 +13,8 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (max-width: 540px) {
+  .user {
+    order: 1;
+  }
+}

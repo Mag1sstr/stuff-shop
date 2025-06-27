@@ -71,3 +71,9 @@
     outline: 1px solid #6c3eb8;
   }
 }
+
+@media (max-width: 450px) {
+  .modal {
+    width: 100%;
+  }
+}

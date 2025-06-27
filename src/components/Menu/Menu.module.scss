@@ -9,3 +9,10 @@
   column-gap: 20px;
   margin-bottom: 20px;
 }
+
+@media (max-width: 750px) {
+  .menu {
+    flex-direction: column;
+    height: auto;
+  }
+}

@@ -65,7 +65,32 @@
   }
 }
 @media (max-width: 750px) {
-  .sidebar {
+  .title {
     display: none;
+  }
+  .sidebar {
+    width: 100%;
+    background: transparent;
+  }
+  .help {
+    display: none;
+  }
+  .links {
+    flex-direction: row;
+    height: auto;
+    gap: 20px;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &:hover::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .link {
+    border-radius: 20px;
+    padding: 8px 12px;
+    color: #fff;
+    background: rgba($color: #fff, $alpha: 0.2);
   }
 }

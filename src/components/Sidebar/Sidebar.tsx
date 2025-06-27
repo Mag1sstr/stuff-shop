@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useGetCategoriesQuery } from "../../api/api";
 import styles from "./Sidebar.module.scss";
 import { ROUTES } from "../../utils/routes";

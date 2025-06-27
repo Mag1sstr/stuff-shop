@@ -55,3 +55,16 @@
   visibility: visible;
   opacity: 1;
 }
+@media (max-width: 550px) {
+  .filters {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+  .btn {
+    display: none;
+  }
+  .item {
+    height: 40px;
+  }
+}
